@@ -6,8 +6,29 @@
 </head>
 <body>
 	
-	<h1> Don't Stop Beliving </h1>
-	<audio> La-traviata-opera.mp3  </audio>
-	<!-- add your scripts tags here -->
+	<h1> Opera!</h1>
+	  <audio id="aud">
+          <source src="La-traviata-opera.mp3" type="audio/mpeg">
+	  </audio>
+	<button onclick="play()" type="button"> Play </button>
+	<button onclick="pause()" type="button"> Pause</button>
+	<button onclick="mute" type="button"> Mute</button>
+	<button onclick="unmute" type="button"> UnMute</button>
+    
+
+
+      <script>
+
+      var player = document.getElementById("aud")
+         function play() {
+         	player.play();
+         }
+
+          function pause() {
+          	player.pause();
+          }
+
+        
+         </script>
 </body>
 </html>
