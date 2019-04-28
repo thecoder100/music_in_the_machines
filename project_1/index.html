@@ -12,13 +12,24 @@
 	  </audio>
 	<button onclick="play()" type="button"> Play </button>
 	<button onclick="pause()" type="button"> Pause</button>
-	<button onclick="mute" type="button"> Mute</button>
-	<button onclick="unmute" type="button"> UnMute</button>
+	<button onclick="mute()" type="button"> Mute</button>
+	<button onclick="unmute()" type="button"> UnMute</button>
     
+        <h1>  What is an Opera?  </h1>
+
+        <p> An opera is a dramatic story using instruments and vocal sound. Some operas are below.  </p>
+
+        <li> The Magic Flute </li>
+        <li> La Travita </li>
+        <li> Carmen  </li>
 
 
+        <footer> &#169; Arjun Singh 2019
+ </footer>
+            <img src="https://cdn2.vectorstock.com/i/1000x1000/33/86/music-notes-on-a-stave-or-staff-vector-2193386.jpg"  height="700px"  width= "700px">
+          
       <script>
-
+      
       var player = document.getElementById("aud")
          function play() {
          	player.play();
@@ -27,8 +38,26 @@
           function pause() {
           	player.pause();
           }
-
+         
+         function  mute() {
+         	player.muted = true;
+         }
+        function unmute() {
+        	player.muted = false;
+        }
         
          </script>
+
+
+         <style>
+           body {
+           	background-color:orange;
+           }
+               button {
+               	background-color:blue;
+               	text-color:white;
+               }
+
+         </style>
 </body>
 </html>
