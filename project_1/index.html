@@ -10,11 +10,13 @@
 	  <audio id="aud">
           <source src="La-traviata-opera.mp3" type="audio/mpeg">
 	  </audio>
-	<button onclick="play()" type="button"> Play </button>
-	<button onclick="pause()" type="button"> Pause</button>
-	<button onclick="mute()" type="button"> Mute</button>
-	<button onclick="unmute()" type="button"> UnMute</button>
-    
+
+    <div id="cool">
+	<button onclick="play()" type="button" class="btn"> Play </button>
+	<button onclick="pause()" type="button" class="btn"> Pause</button>
+	<button onclick="mute()" type="button" class="btn"> Mute</button>
+	<button onclick="unmute()" type="button" class="btn"> UnMute</button>
+    </div>
         <h1>  What is an Opera?  </h1>
 
         <p> An opera is a dramatic story using instruments and vocal sound. Some operas are below.  </p>
@@ -45,7 +47,17 @@
         function unmute() {
         	player.muted = false;
         }
-        
+          var header = document.getElementById("cool")
+          var btns = header.getElementByClassName("btn")
+             for (var i = 0; i < btns.length; i++) {
+              btns[i].addEventListener("click", function() {
+                var current = document.getElementByClassName("active");
+                current[0].className = current[0].className.replace(" active" , "")
+                this.className += " active";
+              })
+             }
+
+
          </script>
 
 
@@ -56,6 +68,20 @@
                button {
                	background-color:blue;
                	text-color:white;
+               }
+
+               .btn {
+                border:none;
+                outline:none;
+                padding:10px 16px;
+                background-color:#f1f1f1;
+                cursor: pointer;
+                font-size: 18px;
+
+                .active, .btn:hover; {
+                  background-color:#666;
+                  color:white;
+                }
                }
 
          </style>
