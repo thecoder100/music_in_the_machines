@@ -7,15 +7,18 @@
 <body>
 	
 	<h1> Opera!</h1>
+  <h2 id = "sg"> La Travita </h2>
 	  <audio id="aud">
           <source src="La-traviata-opera.mp3" type="audio/mpeg">
 	  </audio>
 
     <div id="cool">
+      <button type = "button" class = "btn"> Previous Song </button>
 	<button onclick="play()" type="button" class="btn active"> Play </button>
 	<button onclick="pause()" type="button" class="btn"> Pause</button>
 	<button onclick="mute()" type="button" class="btn "> Mute</button>
 	<button onclick="unmute()" type="button" class="btn"> UnMute</button>
+  <button type = "button" class = "btn" id = "sng"> Next Song! </button>
     </div>
         <h1>  What is an Opera?  </h1>
 
@@ -32,6 +35,15 @@
           
       <script>
       
+          var songs =  ["La Travita", "Overture Finale", "Humoresque Dovark"]
+           document.getElementById("sng").addEventListener("click", yay)
+
+           function yay() {
+            var song1 = document.getElemenyById("sg")
+            //error here
+            sg.innerHTML = songs[Math.celeing( * 2)]
+           }
+
       var player = document.getElementById("aud")
          function play() {
          	player.play();
