@@ -34,15 +34,27 @@
             <img src="https://cdn2.vectorstock.com/i/1000x1000/33/86/music-notes-on-a-stave-or-staff-vector-2193386.jpg"  height="700px"  width= "700px">
           
       <script>
-      
+              var a = 0
           var songs =  ["La Travita", "Overture Finale", "Humoresque Dovark"]
            document.getElementById("sng").addEventListener("click", yay)
 
-           function yay() {
-            var song1 = document.getElemenyById("sg")
-            //error here
-            sg.innerHTML = songs[Math.celeing( * 2)]
+           function nextS() {
+            alert(songs[a])
+            a = a+1
+            if(a>2) {
+              a = 0
+            }
            }
+
+
+            function prevS() {
+              alert(songs[a])
+              a = a-1
+              if(a<0) {
+                a=2
+              }
+            }
+
 
       var player = document.getElementById("aud")
          function play() {
